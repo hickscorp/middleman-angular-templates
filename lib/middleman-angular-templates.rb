@@ -16,7 +16,7 @@ class AngularTemplates < ::Middleman::Extension
           template_name = File.basename(filename, '.*')
           #next unless template_name.slice!(0) == '_'
           template_path = Pathname.new(File.join(File.dirname(filename), template_name))
-          template_id = template_path.relative_path_from(base_dir)
+          template_id = template_path.absolute_path_from(base_dir)
           html << content_tag(
             :script,
             partial(
