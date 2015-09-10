@@ -21,7 +21,7 @@ class AngularTemplates < ::Middleman::Extension
             :script,
             partial(template_path.relative_path_from(source_dir)),
             type: "text/ng-template",
-            id: "/#{ template_id }.html"
+            id: "#{template_id}.html"
           )
         end
       end
