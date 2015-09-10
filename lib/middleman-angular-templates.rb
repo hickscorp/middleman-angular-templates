@@ -19,10 +19,9 @@ class AngularTemplates < ::Middleman::Extension
           template_id = template_path.relative_path_from(base_dir)
           html << content_tag(
             :script,
-            partial(
-              template_path.relative_path_from(source_dir)),
-              type: "text/ng-template",
-              id: "/#{ template_id }.html"
+            partial(template_path.relative_path_from(source_dir)),
+            type: "text/ng-template",
+            id: "/#{ template_id }.html"
           )
         end
       end
